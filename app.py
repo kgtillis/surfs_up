@@ -40,14 +40,16 @@ app = Flask(__name__)
 
 # -- Function with Return statement 
 def welcome():
+    # -- Added additional HTML formatting for ease of use. Adding hyperlink tags
+    #    to make it easier to navigate from home page. 
     return(
     '''
-    Welcome to the Climate Analysis API!
-    Available Routes:
-    /api/v1.0/precipitation
-    /api/v1.0/stations
-    /api/v1.0/tobs
-    /api/v1.0/temp/start/end
+    <h1>Welcome to the Climate Analysis API!</h1>
+    <h2>Available Routes:</h2>
+    <p><a href="/api/v1.0/precipitation">/api/v1.0/precipitation</a></p>
+    <p><a href="/api/v1.0/stations">/api/v1.0/stations</a></p>
+    <p><a href="/api/v1.0/tobs">/api/v1.0/tobs</a></p>
+    <p><a href="/api/v1.0/temp/start/end">/api/v1.0/temp/start/end</a></p>
     ''')
 
 # -- New route: Precipitation
